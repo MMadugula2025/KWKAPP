@@ -10,7 +10,9 @@ import SwiftUI
 struct Journal: View {
     
     @State private var entry = ""
+    @State private var entry2 = ""
     @State private var textTitle = "How are you feeling?"
+    @State private var textTitle2 = "Are you experienceing any specfic symptoms at this time?"
     
     var body: some View {
             NavigationStack {
@@ -33,6 +35,27 @@ struct Journal: View {
                     Button("Submit") {
                         print(entry)
                         textTitle = "\(entry)!"
+                        
+                    }
+                    .font(.title2)
+                    .buttonStyle(.borderedProminent)
+                    .tint(.black)
+                    
+                    //2nd question
+                    //textfield
+                    Text("\(textTitle2)")
+                        .font (.title)
+                        .padding(.top)
+                    TextField("", text: $entry2)
+                        .multilineTextAlignment(.center)
+                        .font(.title)
+                        .border(Color.purple, width: 1)
+                        .padding()
+                    
+                    //button
+                    Button("Submit") {
+                        print(entry)
+                        textTitle2 = "\(entry2)!"
                         
                     }
                     .font(.title2)
