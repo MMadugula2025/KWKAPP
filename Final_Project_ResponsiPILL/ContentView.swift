@@ -33,7 +33,7 @@ struct ContentView: View {
                 //button
                 Button("Submit") {
                     print(name)
-                    textTitle = "Welcome, \(name)!"
+                    textTitle = "Welcome to ResponsiPILL, \(name)!"
                     
                 }
                 .font(.title2)
@@ -41,7 +41,7 @@ struct ContentView: View {
                 .tint(.black)
                
                 //description
-                Text("Hello, \(name)! Welcome to ResponsiPILL, a user-friendly mobile app designed to simplify medication management and enhance your overall healthcare experience. With its intuitive features and comprehensive functionality, ResponsiPILL ensures you never miss a dose while providing valuable information about your medications.")
+                Text("ResponsiPILL is your pill buddy designed to simplify medication management and enhance your overall healthcare experience. With its intuitive features and comprehensive functionality, ResponsiPILL ensures you never miss a dose!")
                     .font(.body)
                     .multilineTextAlignment(.leading)
                     .padding([.top, .leading, .trailing])
