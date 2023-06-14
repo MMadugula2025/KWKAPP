@@ -8,11 +8,48 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var name = ""
+    @State private var textTitle = "What is your name?"
+    
     var body: some View {
+        
         NavigationStack {
             VStack {
-                Text("This is the home page.")
                 
+                Text("ResponsiPILL")
+                    .font(.largeTitle)
+                Text("\(textTitle)")
+                    .font (.title)
+                    .padding(.top)
+                
+                //textfield
+                TextField("", text: $name)
+                    .multilineTextAlignment(.center)
+                    .font(.title)
+                    .border(Color.purple, width: 1)
+                    .padding()
+                
+                //button
+                Button("Submit") {
+                    print(name)
+                    textTitle = "Welcome, \(name)!"
+                    
+                }
+                .font(.title2)
+                .buttonStyle(.borderedProminent)
+                .tint(.black)
+               
+                //description
+                Text("Hello, \(name)! Welcome to ResponsiPILL, a user-friendly mobile app designed to simplify medication management and enhance your overall healthcare experience. With its intuitive features and comprehensive functionality, ResponsiPILL ensures you never miss a dose while providing valuable information about your medications.")
+                    .font(.body)
+                    .multilineTextAlignment(.leading)
+                    .padding([.top, .leading, .trailing])
+                
+                Text("In the next screens, you will be prompted to the Information page which contains detailed descriptions of standard medications and common side effects, the Reminder page which ensures you stay on track with your medication regimen through timely, personalized reminders, and the Journal Page where you can reflect on how your medications affect you and record your health care journey!")
+                    .font(.body)
+                    .multilineTextAlignment(.leading)
+                    .padding([.top, .leading, .trailing])
                 
             }
             .toolbar {

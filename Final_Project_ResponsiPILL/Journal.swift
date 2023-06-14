@@ -11,7 +11,10 @@ struct Journal: View {
     var body: some View {
         NavigationStack {
             VStack {
+                Text("Welcome to the Journal!")
+                    .fontWeight(.bold)
                 Text("This is the Journal page.")
+                    
                 
                 
             }
