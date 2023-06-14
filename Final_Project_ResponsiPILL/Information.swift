@@ -11,6 +11,8 @@ struct Information: View {
     var body: some View {
         NavigationStack {
             VStack {
+                Text("Information page")
+                    .font(.largeTitle)
                 Text("This is the Information page.")
                 
                 

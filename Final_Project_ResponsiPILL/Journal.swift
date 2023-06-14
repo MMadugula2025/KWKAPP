@@ -9,40 +9,74 @@ import SwiftUI
 
 struct Journal: View {
     
-    @State private var entry = ""
+    @State private var entry0 = ""
+    @State private var entry1 = ""
     @State private var entry2 = ""
-    @State private var textTitle = "How are you feeling?"
-    @State private var textTitle2 = "Are you experienceing any specfic symptoms at this time?"
+    @State private var entry3 = ""
+    
+    @State private var textTitle0 = "What is your level of emotional state on a scale of 1 to 10?"
+    @State private var textTitle1 = "Explain your reasoning from your evaluation?"
+    @State private var textTitle2 = "Are you experiencing any specific symptoms from your medications? Elaborate below."
+    @State private var textTitle3 = "How has your user experience been so far using ResponsiPILL?"
+    
     
     var body: some View {
-            NavigationStack {
-                VStack {
-                    
-                    Text("ResponsiPILL")
-                        .font(.largeTitle)
-                    Text("\(textTitle)")
-                        .font (.title)
-                        .padding(.top)
-                    
-                    //textfield
-                    TextField("", text: $entry)
+        NavigationStack {
+            VStack {
+                
+                Text("Journal")
+                    .font(.largeTitle)
+                
+ 
+                
+//Question0
+                //textfield
+                Group{
+                    TextField("", text: $entry0)
                         .multilineTextAlignment(.center)
                         .font(.title)
                         .border(Color.purple, width: 1)
                         .padding()
                     
-                    //button
+                    
+                    //button0
                     Button("Submit") {
-                        print(entry)
-                        textTitle = "\(entry)!"
+                        print(entry0)
+                        textTitle0 = "\(entry0)!"
+                        
                         
                     }
                     .font(.title2)
                     .buttonStyle(.borderedProminent)
                     .tint(.black)
                     
-                    //2nd question
-                    //textfield
+                }
+                
+                
+//Question1
+                //textfield
+                Group{
+                    TextField("", text: $entry1)
+                        .multilineTextAlignment(.center)
+                        .font(.title)
+                        .border(Color.purple, width: 1)
+                        .padding()
+                    
+                    //button1
+                    Button("Submit") {
+                        print(entry1)
+                        textTitle1 = "\(entry1)!"
+                        
+                    }
+                    .font(.title2)
+                    .buttonStyle(.borderedProminent)
+                    .tint(.black)
+                }
+                
+                
+//Question2
+                //textfield
+                Group{
                     Text("\(textTitle2)")
                         .font (.title)
                         .padding(.top)
@@ -52,16 +86,43 @@ struct Journal: View {
                         .border(Color.purple, width: 1)
                         .padding()
                     
-                    //button
+                    //button2
                     Button("Submit") {
-                        print(entry)
+                        print(entry2)
                         textTitle2 = "\(entry2)!"
                         
                     }
                     .font(.title2)
                     .buttonStyle(.borderedProminent)
                     .tint(.black)
+                }
+                
+                
+//Question3
+                //textfield
+                Group{
+                    Text("\(textTitle3)")
+                        .font (.title)
+                        .padding(.top)
+                    TextField("", text: $entry3)
+                        .multilineTextAlignment(.center)
+                        .font(.title)
+                        .border(Color.purple, width: 1)
+                        .padding()
                     
+                    
+                    
+                    //button3
+                    Button("Submit") {
+                        print(entry3)
+                        textTitle3 = "\(entry3)!"
+                        
+                    }
+                    .font(.title2)
+                    .buttonStyle(.borderedProminent)
+                    .tint(.black)
+                }
+                
                     
                     .toolbar {
                         ToolbarItemGroup(placement: .bottomBar) {
@@ -85,14 +146,15 @@ struct Journal: View {
                 }
                 
             }
-        
-        
-            }
+            
+            
         }
-
-
-struct Journal_Previews: PreviewProvider {
-    static var previews: some View {
-        Journal()
-    }
 }
+    
+    
+    struct Journal_Previews: PreviewProvider {
+        static var previews: some View {
+            Journal()
+        }
+    }
+

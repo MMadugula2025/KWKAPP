@@ -11,6 +11,8 @@ struct Reminders: View {
     var body: some View {
         NavigationStack {
             VStack {
+                Text("Reminders")
+                    .font(.largeTitle)
                 Text("This is the Reminders page.")
                 
                 
