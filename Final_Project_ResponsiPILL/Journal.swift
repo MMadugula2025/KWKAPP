@@ -22,12 +22,15 @@ struct Journal: View {
                     ToolbarItemGroup(placement: .bottomBar) {
                     NavigationLink(destination: Information()) {
                                     Text("Information")
+                            .padding([.top, .leading])
                                 }
                         NavigationLink(destination: Reminders()) {
                                         Text("Reminders")
+                                .padding([.top, .leading, .trailing])
                                     }
                         NavigationLink(destination: ContentView()) {
                                         Text("Home")
+                                .padding([.top, .trailing])
                                     }
                                     }
                                 }

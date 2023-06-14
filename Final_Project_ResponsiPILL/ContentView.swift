@@ -41,10 +41,18 @@ struct ContentView: View {
                 .tint(.black)
                
                 //description
+                Text("About ResponsiPILL")
+                    .font(.headline)
+                    .padding(.top)
+                
                 Text("ResponsiPILL is your pill buddy designed to simplify medication management and enhance your overall healthcare experience. With its intuitive features and comprehensive functionality, ResponsiPILL ensures you never miss a dose!")
                     .font(.body)
                     .multilineTextAlignment(.leading)
                     .padding([.top, .leading, .trailing])
+                
+                Text("How to Use ResponsiPILL")
+                    .font(.headline)
+                    .padding(.top)
                 
                 Text("In the next screens, you will be prompted to the Information page which contains detailed descriptions of standard medications and common side effects, the Reminder page which ensures you stay on track with your medication regimen through timely, personalized reminders, and the Journal Page where you can reflect on how your medications affect you and record your health care journey!")
                     .font(.body)
@@ -55,13 +63,17 @@ struct ContentView: View {
             .toolbar {
                     ToolbarItemGroup(placement: .bottomBar) {
                     NavigationLink(destination: Information()) {
-                                    Text("Information")
+                        Text("Information")
+                            .padding([.top, .leading])
                                 }
                         NavigationLink(destination: Reminders()) {
-                                        Text("Reminders")
+                            Text("Reminders")
+                                .padding([.top, .leading, .trailing])
+                            
                                     }
                         NavigationLink(destination: Journal()) {
-                                        Text("Journal")
+                            Text("Journal")
+                                .padding([.top, .trailing])
                                     }
                                     }
                                 }
