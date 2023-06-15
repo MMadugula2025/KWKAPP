@@ -9,39 +9,44 @@ import SwiftUI
 
 struct Reminders: View {
     var body: some View {
-        NavigationStack {
-            VStack {
-                Text("Reminders")
-                    .font(.largeTitle)
-                Text("This is the Reminders page.")
-                
-                
-            }
-            .toolbar {
+        ZStack {
+            LinearGradient(colors: [Color("myCoralOrange"), Color(.white)], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            
+            NavigationStack {
+                VStack {
+                    Text("Reminders")
+                        .font(.largeTitle)
+                    Text("This is the Reminders page.")
+                    
+                    
+                }
+                .toolbar {
                     ToolbarItemGroup(placement: .bottomBar) {
-                    NavigationLink(destination: Information()) {
-                                    Text("Information")
-//                            .padding([.top, .leading])
-                                }
+                        NavigationLink(destination: Information()) {
+                            Text("Information")
+                            //                            .padding([.top, .leading])
+                        }
                         Spacer()
                         NavigationLink(destination: Journal()) {
-                                        Text("Journal")
-//                                .padding([.top, .leading, .trailing])
-                                    }
+                            Text("Journal")
+                            //                                .padding([.top, .leading, .trailing])
+                        }
                         Spacer()
                         NavigationLink(destination: ContentView()) {
-                                        Text("Home")
-//                                .padding([.top, .trailing])
-                                    }
+                            Text("Home")
+                            //                                .padding([.top, .trailing])
+                        }
                         Spacer()
-                                    }
-                                }
-                            }
+                    }
+                }
+            }
+        }
     }
-}
-
-struct Reminders_Previews: PreviewProvider {
-    static var previews: some View {
-        Reminders()
+    
+    struct Reminders_Previews: PreviewProvider {
+        static var previews: some View {
+            Reminders()
+        }
     }
 }

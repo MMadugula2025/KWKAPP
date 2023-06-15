@@ -13,8 +13,11 @@ struct ContentView: View {
     @State private var textTitle = "What is your name?"
     
     var body: some View {
-        
-        NavigationStack {
+        ZStack {
+            LinearGradient(colors: [Color("myBlue"), Color(.white)], startPoint: .top, endPoint: .bottom)
+                .ignoresSafeArea()
+            
+            //NavigationStack {
             VStack {
                 
                 Text("ResponsiPILL")
@@ -39,7 +42,7 @@ struct ContentView: View {
                 .font(.title2)
                 .buttonStyle(.borderedProminent)
                 .tint(.black)
-               
+                
                 //description
                 Text("About ResponsiPILL")
                     .font(.headline)
@@ -60,35 +63,38 @@ struct ContentView: View {
                     .padding([.top, .leading, .trailing])
                 
             }
-            .toolbar {
+
+                .toolbar {
                     ToolbarItemGroup(placement: .bottomBar) {
-                    NavigationLink(destination: Information()) {
-                        Text("Information")
-//                            .padding([.top, .leading])
-                                }
+                        NavigationLink(destination: Information()) {
+                            Text("Information")
+                            //                            .padding([.top, .leading])
+                        }
                         Spacer()
                         
                         NavigationLink(destination: Reminders()) {
                             Text("Reminders")
-//                                .padding([.top, .leading, .trailing])
+                            //                                .padding([.top, .leading, .trailing])
                             
-                                    }
+                        }
                         Spacer()
                         
                         NavigationLink(destination: Journal()) {
                             Text("Journal")
-//                                .padding([.top, .trailing])
-                                    }
+                            //                                .padding([.top, .trailing])
+                        }
                         Spacer()
-                                    }
-                                }
-                            }
-            
+                    }
+                }
+            }
         }
+    //}
+}
+    
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
-    }
+}
+    
 
