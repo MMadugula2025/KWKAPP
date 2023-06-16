@@ -7,6 +7,8 @@
 
 import SwiftUI
 struct Information: View {
+    let persistenceController = PersistenceController.shared
+
     var body: some View {
         NavigationStack {
             ZStack{
@@ -74,7 +76,7 @@ struct Information: View {
                                 //              .padding([.top, .leading])
                             }
                             Spacer()
-                            NavigationLink(destination: Reminders()) {
+                            NavigationLink(destination: Reminders().environment(\.managedObjectContext, persistenceController.container.viewContext)) {
                                 Text("Reminders")
                                     .lineLimit(0)
                                 //                .padding([.top, .leading, .trailing])

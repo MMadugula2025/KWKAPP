@@ -13,6 +13,8 @@ struct ResponsiPILL_AppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
+            
            // Reminders().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Journal: View {
+    let persistenceController = PersistenceController.shared
     
     @State private var entry0 = ""
     @State private var entry1 = ""
@@ -137,7 +138,7 @@ struct Journal: View {
                         //                            .padding([.top, .leading])
                     }
                     Spacer()
-                    NavigationLink(destination: Reminders()) {
+                    NavigationLink(destination: Reminders().environment(\.managedObjectContext, persistenceController.container.viewContext)) {
                         Text("Reminders")
                         //                                .padding([.top, .leading, .trailing])
                     }

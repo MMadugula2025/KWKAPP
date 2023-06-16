@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Reminders: View {
+
     @Environment(\.managedObjectContext) var context
     
     // @State var toDoItems: [ToDoItem] = []
@@ -70,8 +71,8 @@ struct Reminders: View {
                         }
                         Spacer()
                         
-                        NavigationLink(destination: Reminders()) {
-                            Text("Reminders")
+                        NavigationLink(destination: ContentView()) {
+                            Text("Home")
                             //                                .padding([.top, .leading, .trailing])
                             
                         }
@@ -101,14 +102,6 @@ struct Reminders: View {
         }
     }
     }
-  
-
-      
-  
-
-                    
-
-    
 
     
     struct Reminders_Previews: PreviewProvider {
