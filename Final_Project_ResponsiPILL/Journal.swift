@@ -27,7 +27,7 @@ struct Journal: View {
         NavigationStack {
             ZStack {
 //                AngularGradient(colors: [ .purple, .blue, .mint, .purple], center: .center)
-                LinearGradient(colors: [Color(.purple), Color("myYellow")], startPoint: .top, endPoint: .bottom)
+                LinearGradient(colors: [Color("darkPink"), Color("myYellow")], startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 ScrollView {
                     VStack {
