@@ -12,18 +12,24 @@ struct Information: View {
     var body: some View {
         NavigationStack {
             ZStack{
-                LinearGradient(colors: [Color("myPurple"), Color(.white)], startPoint: .top, endPoint: .bottom)
+                LinearGradient(colors: [Color("darkBlue"), Color("darkPink")], startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 ScrollView{
                     VStack {
                         Group {
                             Text("Information")
                                 .font(.largeTitle)
+                                .fontWeight(.bold)
+                                .foregroundColor(Color.white)
+                            
                             Text("Source: webmd.com and medlineplus.gov")
                                 .font(.caption)
+                                .padding(.bottom)
                             Text("Most Common Medication")
-                                .font(.title2)
+                                .font(.title3)
+                                .fontWeight(.semibold)
                                 .padding(.top)
+                                .background(.regularMaterial)
                             Text("Atorvastatin: Atorvastatin and a proper diet lower bad cholesterol and fats and raise good cholesterol in blood. It works by reducing the amount of cholesterol made by the liver. Take this medication regularly to get the most benefit from it. Remember to take it at the same time each day.")
                                 .font(.body)
                                 .multilineTextAlignment(.leading)
@@ -37,9 +43,10 @@ struct Information: View {
                                 .multilineTextAlignment(.leading)
                                 .padding([.top, .leading, .trailing])
                             Text("Side Effects of Common Medication:")
-                                .font(.title2)
-                                .multilineTextAlignment(.center)
+                                .font(.title3)
+                                .fontWeight(.semibold)
                                 .padding(.top)
+                                .background(.regularMaterial)
                         }
                         Group {
                             Text("Remember that your medication has been prescribed because your doctor has judged that the benefit to you is greater than the risk of side effects. ")
@@ -59,8 +66,10 @@ struct Information: View {
                                 .multilineTextAlignment(.leading)
                                 .padding([.top, .leading, .trailing])
                             Text("Vitamins and their Benefits:")
-                                .font(.title2)
+                                .font(.title3)
+                                .fontWeight(.semibold)
                                 .padding(.top)
+                                .background(.regularMaterial)
                             Image("VitaminBenefits")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)

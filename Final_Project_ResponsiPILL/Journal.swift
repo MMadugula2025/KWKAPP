@@ -26,24 +26,34 @@ struct Journal: View {
         
         NavigationStack {
             ZStack {
-                LinearGradient(colors: [Color("myPink"), Color(.white)], startPoint: .top, endPoint: .bottom)
+//                AngularGradient(colors: [ .purple, .blue, .mint, .purple], center: .center)
+                LinearGradient(colors: [Color(.purple), Color("myYellow")], startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 ScrollView {
                     VStack {
                         
                         Text("Journal")
                             .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+
+                        Text("Reflect on your thoughts")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                            .padding(.vertical)
 
                         //Question0
                         //textfield
                         Group{
                             Text("\(textTitle0)")
-                                .font (.title)
+                                .font(.title3)
+                                .fontWeight(.semibold)
                                 .padding(.top)
+                                .background(.regularMaterial)
                             TextField("", text: $entry0)
                                 .multilineTextAlignment(.center)
                                 .font(.title)
-                                .border(Color.purple, width: 1)
+                                .border(Color.white, width: 1)
                                 .padding()
    
                             //button0
@@ -63,12 +73,14 @@ struct Journal: View {
                         //textfield
                         Group{
                             Text("\(textTitle1)")
-                                .font (.title)
+                                .font(.title3)
+                                .fontWeight(.semibold)
                                 .padding(.top)
+                                .background(.regularMaterial)
                             TextField("", text: $entry1)
                                 .multilineTextAlignment(.center)
                                 .font(.title)
-                                .border(Color.purple, width: 1)
+                                .border(Color.white, width: 1)
                                 .padding()
                             
                             //button1
@@ -87,12 +99,14 @@ struct Journal: View {
                         //textfield
                         Group{
                             Text("\(textTitle2)")
-                                .font (.title)
+                                .font(.title3)
+                                .fontWeight(.semibold)
                                 .padding(.top)
+                                .background(.regularMaterial)
                             TextField("", text: $entry2)
                                 .multilineTextAlignment(.center)
                                 .font(.title)
-                                .border(Color.purple, width: 1)
+                                .border(Color.white, width: 1)
                                 .padding()
                             
                             //button2
@@ -110,12 +124,14 @@ struct Journal: View {
                         //textfield
                         Group{
                             Text("\(textTitle3)")
-                                .font (.title)
+                                .font(.title3)
+                                .fontWeight(.semibold)
                                 .padding(.top)
+                                .background(.regularMaterial)
                             TextField("", text: $entry3)
                                 .multilineTextAlignment(.center)
                                 .font(.title)
-                                .border(Color.purple, width: 1)
+                                .border(Color.white, width: 1)
                                 .padding()
                             
                             //button3

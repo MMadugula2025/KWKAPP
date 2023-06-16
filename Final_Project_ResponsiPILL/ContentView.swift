@@ -19,8 +19,9 @@ struct ContentView: View {
         
         NavigationStack {
             ZStack {
-                LinearGradient(colors: [Color("myBlue"), Color("myPink")], startPoint: .top, endPoint: .bottom)
-                    .ignoresSafeArea()
+                
+                AngularGradient(colors: [.teal, .mint, .purple, .teal], center: .center)
+                   .ignoresSafeArea()
                 ScrollView {
                     VStack {
                         
@@ -28,10 +29,12 @@ struct ContentView: View {
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
-//                          .background(.white)
+
                         Text("\(textTitle)")
-                            .font (.title)
+                            .font(.title)
+                            .fontWeight(.semibold)
                             .padding(.top)
+                            .background(.regularMaterial)
                         
                         //textfield
                         TextField("", text: $name)
@@ -51,8 +54,9 @@ struct ContentView: View {
                         .tint(.blue)
                         
                         //description
-                        Text("About ResponsiPILL...")
-                            .font(.headline)
+                        Text("About ResponsiPILL")
+                            .font(.title3)
+                            .fontWeight(.semibold)
                             .padding(.top)
                             .background(.regularMaterial)
                         
@@ -62,8 +66,9 @@ struct ContentView: View {
                             .padding([.top, .leading, .trailing])
 
                         
-                        Text("How to Use ResponsiPILL...")
-                            .font(.headline)
+                        Text("How to Use ResponsiPILL")
+                            .font(.title3)
+                            .fontWeight(.semibold)
                             .padding(.top)
                             .background(.regularMaterial)
                         
