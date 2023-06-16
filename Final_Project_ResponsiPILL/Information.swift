@@ -10,7 +10,7 @@ struct Information: View {
     var body: some View {
         NavigationStack {
             ZStack{
-                LinearGradient(colors: [Color(.purple), Color(.white)], startPoint: .top, endPoint: .bottom)
+                LinearGradient(colors: [Color("myPurple"), Color(.white)], startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 ScrollView{
                     VStack {

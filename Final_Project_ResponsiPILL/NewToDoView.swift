@@ -21,6 +21,8 @@ struct NewToDoView: View {
             Text("List the time of day, frequency, and quantity of your medication intake :)")
                 .font(.title)
                 .fontWeight(.bold)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
             
             TextField("Enter the information", text: $title)
                 .padding()

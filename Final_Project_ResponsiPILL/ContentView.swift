@@ -11,7 +11,7 @@ struct ContentView: View {
     let persistenceController = PersistenceController.shared
     
     @State private var name = ""
-    @State private var textTitle = "What is your name?.."
+    @State private var textTitle = "What is your name?"
     
     var body: some View {
         
