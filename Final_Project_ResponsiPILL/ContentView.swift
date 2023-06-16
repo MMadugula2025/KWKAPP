@@ -26,6 +26,7 @@ struct ContentView: View {
                         
                         Text("ResponsiPILL")
                             .font(.largeTitle)
+                            .foregroundColor(Color.black)
                         Text("\(textTitle)")
                             .font (.title)
                             .padding(.top)
@@ -34,7 +35,7 @@ struct ContentView: View {
                         TextField("", text: $name)
                             .multilineTextAlignment(.center)
                             .font(.title)
-                            .border(Color.purple, width: 1)
+                            .border(Color.blue, width: 1)
                             .padding()
                         
                         //button
