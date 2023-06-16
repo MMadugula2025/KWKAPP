@@ -19,14 +19,16 @@ struct ContentView: View {
         
         NavigationStack {
             ZStack {
-                LinearGradient(colors: [Color("myBlue"), Color(.white)], startPoint: .top, endPoint: .bottom)
+                LinearGradient(colors: [Color("myBlue"), Color("myPink")], startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 ScrollView {
                     VStack {
                         
                         Text("ResponsiPILL")
                             .font(.largeTitle)
-                            .foregroundColor(Color.black)
+                            .fontWeight(.bold)
+                            .foregroundColor(Color.white)
+//                          .background(.white)
                         Text("\(textTitle)")
                             .font (.title)
                             .padding(.top)
@@ -46,26 +48,30 @@ struct ContentView: View {
                         }
                         .font(.title2)
                         .buttonStyle(.borderedProminent)
-                        .tint(.black)
+                        .tint(.blue)
                         
                         //description
-                        Text("About ResponsiPILL")
+                        Text("About ResponsiPILL...")
                             .font(.headline)
                             .padding(.top)
+                            .background(.regularMaterial)
                         
                         Text("ResponsiPILL is your pill buddy designed to simplify medication management and enhance your overall healthcare experience. With its intuitive features and comprehensive functionality, ResponsiPILL ensures you never miss a dose!")
                             .font(.body)
                             .multilineTextAlignment(.leading)
                             .padding([.top, .leading, .trailing])
+
                         
-                        Text("How to Use ResponsiPILL")
+                        Text("How to Use ResponsiPILL...")
                             .font(.headline)
                             .padding(.top)
+                            .background(.regularMaterial)
                         
                         Text("In the next screens, you will be prompted to the Information page which contains detailed descriptions of standard medications and common side effects, the Reminder page which ensures you stay on track with your medication regimen through timely, personalized reminders, and the Journal Page where you can reflect on how your medications affect you and record your health care journey!")
                             .font(.body)
                             .multilineTextAlignment(.leading)
                             .padding([.top, .leading, .trailing])
+                            
                         
                     }
                     
