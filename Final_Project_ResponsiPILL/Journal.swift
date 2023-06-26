@@ -37,7 +37,7 @@ struct Journal: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color.white)
 
-                        Text("Reflect on your thoughts")
+                        Text("Reflect on your thoughts.")
                             .font(.title2)
                             .fontWeight(.semibold)
                             .padding(.vertical)
@@ -53,13 +53,13 @@ struct Journal: View {
                             TextField("", text: $entry0)
                                 .multilineTextAlignment(.center)
                                 .font(.title)
-                                .border(Color.white, width: 1)
+                                .border(Color.white, width: 4)
                                 .padding()
    
                             //button0
                             Button("Submit") {
                                 print(entry0)
-                                textTitle0 = "\(entry0)!"
+                                textTitle0 = "\(entry0)"
  
                             }
                             .font(.title2)
@@ -80,13 +80,13 @@ struct Journal: View {
                             TextField("", text: $entry1)
                                 .multilineTextAlignment(.center)
                                 .font(.title)
-                                .border(Color.white, width: 1)
+                                .border(Color.white, width: 4)
                                 .padding()
                             
                             //button1
                             Button("Submit") {
                                 print(entry1)
-                                textTitle1 = "\(entry1)!"
+                                textTitle1 = "\(entry1)"
                                 
                             }
                             .font(.title2)
@@ -106,13 +106,13 @@ struct Journal: View {
                             TextField("", text: $entry2)
                                 .multilineTextAlignment(.center)
                                 .font(.title)
-                                .border(Color.white, width: 1)
+                                .border(Color.white, width: 4)
                                 .padding()
                             
                             //button2
                             Button("Submit") {
                                 print(entry2)
-                                textTitle2 = "\(entry2)!"
+                                textTitle2 = "\(entry2)"
                                 
                             }
                             .font(.title2)
@@ -131,13 +131,13 @@ struct Journal: View {
                             TextField("", text: $entry3)
                                 .multilineTextAlignment(.center)
                                 .font(.title)
-                                .border(Color.white, width: 1)
+                                .border(Color.white, width: 4)
                                 .padding()
                             
                             //button3
                             Button("Submit") {
                                 print(entry3)
-                                textTitle3 = "\(entry3)!"
+                                textTitle3 = "\(entry3)"
                             }
                             .font(.title2)
                             .buttonStyle(.borderedProminent)

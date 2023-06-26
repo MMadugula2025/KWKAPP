@@ -25,10 +25,14 @@ struct ContentView: View {
                 ScrollView {
                     VStack {
                         
-                        Text("ResponsiPILL")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                            .foregroundColor(Color.white)
+                        Image("ResponsiPILLLogo")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                            .padding(.all)
+                            .border(Color.white, width: 10)
+                                .padding()
+                        
+                        
 
                         Text("\(textTitle)")
                             .font(.title)
@@ -40,8 +44,9 @@ struct ContentView: View {
                         TextField("", text: $name)
                             .multilineTextAlignment(.center)
                             .font(.title)
-                            .border(Color.blue, width: 1)
+                            .border(Color.white, width: 4)
                             .padding()
+                            
                         
                         //button
                         Button("Submit") {
