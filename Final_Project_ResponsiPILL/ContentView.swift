@@ -54,6 +54,7 @@ struct ContentView: View {
                             textTitle = "Welcome to ResponsiPILL, \(name)!"
                             
                         }
+                        .padding(.bottom)
                         .font(.title2)
                         .buttonStyle(.borderedProminent)
                         .tint(.blue)
@@ -68,7 +69,7 @@ struct ContentView: View {
                         Text("ResponsiPILL is your pill buddy designed to simplify medication management and enhance your overall healthcare experience. With its intuitive features and comprehensive functionality, ResponsiPILL ensures you never miss a dose!")
                             .font(.body)
                             .multilineTextAlignment(.leading)
-                            .padding([.top, .leading, .trailing])
+                            .padding(.all)
 
                         
                         Text("How to Use ResponsiPILL")
